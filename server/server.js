@@ -17,7 +17,7 @@ const db = new sqlite3.Database("./myapp.db", (err) => {
   console.log("Connected to the myapp.db database.");
 });
 db.serialize(() => {
-  db.run(`DROP TABLE IF EXISTS users`); // This line is just for development purposes, remove it in production
+  db.run(`DROP TABLE IF EXISTS users`);
   db.run(`CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL,
@@ -31,7 +31,7 @@ db.serialize(() => {
     totalCommentsReceived INTEGER NOT NULL
 )`);
 
-  db.run(`DROP TABLE IF EXISTS posts`); // This line is also just for development purposes, remove it in production
+  db.run(`DROP TABLE IF EXISTS posts`);
   db.run(`CREATE TABLE IF NOT EXISTS posts (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       title TEXT NOT NULL,
