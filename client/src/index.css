@@ -1,0 +1,30 @@
+:root {
+  --background-color-body: #f8f9fa;
+  --background-color-header: #28a745;
+  --background-color-footer: #398f4d;
+  --color-hover: #218838;
+  --tags-hover: #e6e6e6;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color-body);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.modal-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
